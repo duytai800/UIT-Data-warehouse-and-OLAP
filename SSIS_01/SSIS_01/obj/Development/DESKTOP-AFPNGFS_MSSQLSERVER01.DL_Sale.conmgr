@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-AFPNGFS_MSSQLSERVER01.DL_Sale"
+  DTS:DTSID="{2E9BB859-2BC9-4FE1-A1CC-35442D49AE54}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-AFPNGFS\MSSQLSERVER01;Initial Catalog=DL_Sale;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSIS_01-{2E9BB859-2BC9-4FE1-A1CC-35442D49AE54}DESKTOP-AFPNGFS\MSSQLSERVER01.DL_Sale;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
