@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{C1BCB250-BF22-4181-85BC-3CAF6F2CDC4E}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{FADCD048-FA1C-442F-8565-893AE20EDE97}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6RxQC16sokq54aV/K99hXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACc5gWARzmYBUomroNgmky6EtjhE7/bqFfxFNI7D0nSwAAAAAAOgAAAAAIAACAAAACFylkuW5xwEF5F2PhE2SUcbCxU0aZJq0BbC7bsYqmvmxAAAAC2rIveB9VeGwkKEtymgmbMQAAAANFBhBihBAcNJI2iQK0QFGz3zBZ2bb/JD1HGSVOAE8zEgnqR2z04mNTGUP1B+9Ch940msD4dG+uoNPL46tSl3Ro</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6RxQC16sokq54aV/K99hXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAdhj1cpdArEuDMHsvexIb/XJE5iKH4/PDILp4MVSitIwAAAAAOgAAAAAIAACAAAAAG7wHZ46DFNIax1zQw8K8ozOAo7tbWnS/aaIAi7VoByRAAAACbr/htqBZxROIrqkYlibH6QAAAAMxUJLP06ZDIqZZiIJ2NxtB7dEtICTyhj6RdjcfX34etTAx1139LHhXX3jSc800GjoXceC6eI7s6/0PrdPb/6nE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6RxQC16sokq54aV/K99hXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACA46pr1bQ1u3Vqx5/ue36L1fF4E8HzNI7AQ0zCCoenQAAAAAAOgAAAAAIAACAAAACdNuiDG9U10ayFlETdBK7NOJ9eGKjPOdV9HG/vNEDxqBAAAABuSlHrE25eOrKrfM9YkDCTQAAAAGGzCWtgLPtCfdvvjrna0zqtI6ebavu8qp9sX/0Pd3TOxwHmDuV1e8ctkYVGTYfZgtaC87eC23aHgAKtSzA107M</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6RxQC16sokq54aV/K99hXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLGHrJgUiESWDLQflMWaRV+tF4viHFUsTNwjsnfWW9iQAAAAAOgAAAAAIAACAAAACF1zdQVDJiVIDRJRaE3x30yIRwRGjmjjz50ceomEPpJhAAAABWMzIwXKKp3abC4WmCCFYvQAAAAACAzyrKqsRu1Rd+ANzjOaDPVOqd7vn+ZkI4KL0kkiMfvNwykmm3QgYY/0LtfF6raVa/O9pNxYGC5YE9qOOjTxk</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -61,7 +61,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6RxQC16sokq54aV/K99hXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADi6e8+uj1uU23gA3BKN5UV2eLWiny9VWi/LnnRpYxOOwAAAAAOgAAAAAIAACAAAAA7p7vAhHfgMeeHc+nNAfWo/OPR9jkqHAMO88XMhMw8vBAAAAAKoA3ZB092qegGq84NzrAIQAAAAJ+77kVSgZ4T1zikj7ImjkjDNz/ZfnQXseHRd0k+yPsDq3bqWvSZWeh32vwE5sW6WxwrvVsBVNWYBKFcNaszoA0</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA6RxQC16sokq54aV/K99hXwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACdbcSU1vsR3J0T3Ff0rBobdXW8cKir7aiShzKWHbd+wQAAAAAOgAAAAAIAACAAAADIpCJrxLAsXTOr4iU2jft1wuS3WCtEThp1516jw8zzpBAAAAAQFEtFTD+sfn1vkPTgl+jYQAAAAGn8SQ9+Lq5kgFRujjOihrZWMEl5i8F9hCCNRoSo0yxYTE/lwTiPI3xAcm/nAEG4vDNbm80nO7G6Ej5BimclIhw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -86,7 +86,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\project\OLAP\train_excel_general.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\project\OLAP\train_excel_general.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -2103,46 +2103,32 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139,42"
-          Id="Package\Data Flow Task\Excel Source"
-          TopLeft="21,84" />
-        <NodeLayout
-          Size="120,42"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="203,87" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="160,106.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43,0"
-              Start="0,0"
-              End="35.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="35.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="98,42"
           Id="Package\Data Flow Task\Sort"
           TopLeft="398,85" />
         <NodeLayout
+          Size="120,42"
+          Id="Package\Data Flow Task\Multicast"
+          TopLeft="203,87" />
+        <NodeLayout
           Size="107,42"
           Id="Package\Data Flow Task\Sort 1"
           TopLeft="380,203" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="21,84" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Data Flow Task\Fact"
+          TopLeft="576,88" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Data Flow Task\Dim_Product"
+          TopLeft="562,207" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
-          TopLeft="323,107">
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="487,226">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2154,6 +2140,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="67.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="496,107.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80,0"
+              Start="0,0"
+              End="72.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="72.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2196,39 +2204,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="99,42"
-          Id="Package\Data Flow Task\Fact"
-          TopLeft="576,88" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="496,107.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="80,0"
-              Start="0,0"
-              End="72.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="72.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\Data Flow Task\Dim_Product"
-          TopLeft="562,207" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="487,226">
+          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
+          TopLeft="323,107">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2240,6 +2218,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="67.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="160,106.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43,0"
+              Start="0,0"
+              End="35.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
