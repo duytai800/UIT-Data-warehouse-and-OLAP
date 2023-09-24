@@ -820,7 +820,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4332" scrolltop="3928" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="88" x="11800" y="13335" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4332" scrolltop="5063" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="88" x="18124" y="14049" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -1001,7 +1001,7 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>3928</Value>
+          <Value>5063</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -1317,25 +1317,36 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE;      
+CALCULATE;    
+CREATE DYNAMIC SET CURRENTCUBE.[TopThanhPho]
+ AS GENERATE(
+  [Dim Date].[Year].[Year],
+  TOPCOUNT(
+   [Dim Date].[Year].CurrentMember * [Dim Shipment].[City].[City],
+    1,
+    [Measures].[Sum Sales]
+  )
+);            
 CREATE DYNAMIC SET CURRENTCUBE.[Cau6]
- AS GENERATE([Dim Shipment].[State] *[Dim Shipment].[Ship Mode].[Ship Mode], TOPCOUNT([Dim Shipment].[State].CurrentMember* [Dim Shipment].[Ship Mode].[Ship Mode],2,[Measures].[Count Shipment ID]  ) );         
+ AS GENERATE([Dim Shipment].[State] *[Dim Shipment].[Ship Mode].[Ship Mode], TOPCOUNT([Dim Shipment].[State].CurrentMember* [Dim Shipment].[Ship Mode].[Ship Mode],2,[Measures].[Count Shipment ID]  ) );               
 CREATE DYNAMIC SET CURRENTCUBE.[Cau4]
- AS {FILTER([Dim Customer].[Customer Name].[Customer Name] ,[Measures].[Count Product ID]&gt;10 AND [Dim Product].[Category].&amp;[Office Supplies] )};       
+ AS {FILTER([Dim Customer].[Customer Name].[Customer Name] ,[Measures].[Count Product ID]&gt;10 AND [Dim Product].[Category].&amp;[Office Supplies] )};             
 CREATE DYNAMIC SET CURRENTCUBE.[Cau2]
- AS GENERATE([Dim Date].[Year].[Year] ,TOPCOUNT(FILTER([Dim Date].[Year].CurrentMember*[Dim Shipment].[City].[City] , [Dim Shipment].[State].&amp;[Texas]) , 1,[Measures].[Sum Sales] ) );           
+ AS GENERATE([Dim Date].[Year].[Year] ,TOPCOUNT(FILTER([Dim Date].[Year].CurrentMember*[Dim Shipment].[City].[City] , [Dim Shipment].[State].&amp;[Texas]) , 1,[Measures].[Sum Sales] ) );                 
 CREATE DYNAMIC SET CURRENTCUBE.[Cau3]
- AS UNION(HEAD(ORDER([Dim Product].[Product Name].[Product Name] , [Measures].[Count Product ID] , desc),3)  , HEAD(ORDER([Dim Product].[Product Name].[Product Name] , [Measures].[Count Product ID] , asc),3));     
+ AS GENERATE( [Dim Date].[Year].[Year], TOPCOUNT( [Dim Date].[Year].CurrentMember*[Dim Product].[Product Name].[Product Name].Members,5,[Measures].[Sum Sales]  ));           
 CREATE DYNAMIC SET CURRENTCUBE.[Cau8]
- AS GENERATE([Dim Date].[Month].Children ,TOPCOUNT(FILTER([Dim Date].[Month].CurrentMember*[Dim Customer].[Segment].Children , [Dim Date].[Year].&amp;[2017] AND [Dim Shipment].[City].&amp;[New York City]) ,1,[Measures].[Sum Sales]  ) );    
+ AS GENERATE([Dim Date].[Month].Children ,TOPCOUNT(FILTER([Dim Date].[Month].CurrentMember*[Dim Customer].[Segment].Children , [Dim Date].[Year].&amp;[2017] AND [Dim Shipment].[City].&amp;[New York City]) ,1,[Measures].[Sum Sales]  ) );          
 CREATE DYNAMIC SET CURRENTCUBE.[Cau9]
  AS DRILLDOWNLEVEL(
 			DRILLDOWNLEVEL(
-				[Dim Date].[Hierarchy].Children));  
+				[Dim Date].[Hierarchy].Children));        
 CREATE DYNAMIC SET CURRENTCUBE.[Cau10]
  AS Filter(
 	[Dim Date].[Year].Children,
-	[Measures].[Count Order ID] &gt; 10) ; </Text>
+	[Measures].[Count Order ID] &gt; 10);   
+CREATE DYNAMIC SET CURRENTCUBE.[TopThanhPho-Loc]
+ AS GENERATE([Dim Date].[Year].[Year] ,TOPCOUNT(FILTER([Dim Date].[Year].CurrentMember*[Dim Shipment].[City].[City] , [Dim Shipment].[State].&amp;[Florida]) , 1,[Measures].[Sum Sales] ) ) ; </Text>
             </Command>
           </Commands>
         </MdxScript>

@@ -61,7 +61,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>lT6CUSoBNjsOZ2TQAtR3W2avchM=5/27/2023 3:51:08 PM5/22/2023 8:56:46 PMz5EI7svZ6xS8Q3MchLxKeMBkWhs=5/25/2023 12:24:45 PM5/22/2023 8:56:46 PM</TimeStamp>
+        <TimeStamp>uj1IuZdFUtRJGLKJd5CM3zm8spU=5/30/2023 3:31:44 PM5/22/2023 8:56:46 PMz5EI7svZ6xS8Q3MchLxKeMBkWhs=5/25/2023 12:24:45 PM5/22/2023 8:56:46 PM</TimeStamp>
         <ID>
           <String>DW Sale</String>
         </ID>
@@ -78,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-05-27T08:51:11.99Z</LastDeployed>
+  <LastDeployed>2023-05-30T08:31:48.47Z</LastDeployed>
 </DeploymentSnapshot>
